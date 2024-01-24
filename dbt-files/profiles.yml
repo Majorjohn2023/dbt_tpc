@@ -1,0 +1,1 @@
+{"DEFAULT":{"target":"default","outputs":{"default":{"role":"ACCOUNTADMIN","schema":"testing_schema_dev","account":"rb83340.europe-west4.gcp","database":"rawdata_db","password":"NpI9UcA8Cn#9","warehouse":"compute_wh","type":"snowflake","user":"ranjuramesh"}}}}
