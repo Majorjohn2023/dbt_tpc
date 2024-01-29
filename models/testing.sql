@@ -14,18 +14,6 @@ WITH detailed_orders AS (
         s.s_name as supplier_name,
         sn.n_name as supplier_nation_name,
         CASE 
-        c.c_name,
-        c.c_nationkey,
-        n.n_name as customer_nation_name,
-        s.s_name as supplier_name,
-        sn.n_name as supplier_nation_name,
-        CASE 
-            WHEN o.o_orderdate < '1995-01-01' THEN 'Old Order'
-            WHEN o.o_orderdate >= '1995-01-01' THEN 'New Order'
-            ELSE 'Unknown'
-        END as order_age,
-
-
             WHEN o.o_orderdate < '1995-01-01' THEN 'Old Order'
             WHEN o.o_orderdate >= '1995-01-01' THEN 'New Order'
             ELSE 'Unknown'
