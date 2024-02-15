@@ -28,9 +28,9 @@ WITH detailed_orders AS (
             ELSE 'Regular'
         END as order_category
     FROM "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10".orders o
-    JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10".lineitem l ON o.o_orderkey = l.l_orderkey
     JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10".customer c ON o.o_custkey = c.c_custkey
     JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10".nation n ON c.c_nationkey = n.n_nationkey
+    JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10".lineitem l ON o.o_orderkey = l.l_orderkey
     JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10".supplier s ON l.l_suppkey = s.s_suppkey
     JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10".nation sn ON s.s_nationkey = sn.n_nationkey
 )
